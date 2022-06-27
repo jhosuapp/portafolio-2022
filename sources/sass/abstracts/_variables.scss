@@ -1,0 +1,35 @@
+//PALETA DE COLORES
+
+$palette : (
+    'primario': #fff,
+    'secundario': #000,
+    'azul': #042F72,
+    'gris': #414241,
+    'morado': #23346F,
+    'amarillo': #FEDB31
+);   
+
+//FONT SIZE
+
+$font : (
+    'titulos': 55px
+);
+
+$font-mobile: (
+    'titulos': 20px
+);
+
+//BREAKPOINTS
+
+$breakpoints: (
+    'desktop': 1800px,
+    'portatil': 1440px,
+    'ipad-grande': 992px,
+    'ipad-pequeña': 768px,
+    'celular': 576px
+
+);
+
+//OTROS
+
+$transition-duration: .3s;
