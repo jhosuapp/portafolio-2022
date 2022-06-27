@@ -1,0 +1,11 @@
+.contenedor{
+    max-width: 1600px;
+    width: 90%;
+    margin: auto;
+    &--padding{
+        padding: 60px;
+    }
+    &--bottom{
+        margin-bottom: 100px;
+    }
+}

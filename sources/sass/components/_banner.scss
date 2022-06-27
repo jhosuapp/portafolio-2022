@@ -1,0 +1,36 @@
+.banner{
+    margin-top: 70px;
+    width: 100%;
+    position: relative;
+    &__svg{
+        min-height: 400px;
+        width: 100%;
+        z-index: 99;
+    }
+    &__absolute{
+        position: absolute;
+        height: 100%; 
+        overflow: hidden;
+        z-index: 0;
+    }
+    &__bloque{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        gap: 30px;
+    }
+    &__descripcion{
+        margin-bottom: 10px;
+    }
+    &__left{
+        width: 60%;
+    }
+    &__right{
+        width: 40%;
+    }
+    &__imagen{
+        width: 100%;
+        max-height: 550px;
+        object-fit: contain;
+    }
+}

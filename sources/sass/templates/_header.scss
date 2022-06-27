@@ -1,0 +1,73 @@
+.header{
+    position: relative;
+    z-index: 9;
+    &__bottom{
+        padding: 10px 30px;
+        background: color('morado');
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        @include flex($jc: space-between);
+        transition: .3s background-color ease;
+        &.active{
+            top: 0;
+            position: fixed;
+        }
+        &__logo{
+            font-size: 40px;
+            color: color('primario');
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        &__list{
+            display: flex;
+            gap: 50px;
+        }
+        &__item{
+            color: color('primario');
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            transition: $transition-duration color ease;
+            &:hover{
+                opacity: .7;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 80%;
+                background-color: color('primario');
+                right: -25px;
+                top: calc(50% - 40%);
+            }
+            &:last-child{
+                &::after{
+                    background-color: transparent;
+                    height: 0;
+                    width: 0;
+                }
+            }
+        }
+        &__rigth{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        &__svg{
+            width: 300px;
+        }
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .header{
+        &__bottom{
+            &__list{
+                display: none;
+            }
+        }
+    }
+}

@@ -5,3 +5,17 @@
         'abstracts/mixins',
         'abstracts/functions',
         'abstracts/restart';
+
+//ANIMATIONS
+@import 'animations/header';
+
+//COMPONENTS
+@import 'components/banner',
+        'components/hamburguesa',
+        'components/titulos',
+        'components/contenedores',
+        'components/button';
+
+//TEMPLATES
+@import 'templates/header',
+        'templates/footer';
