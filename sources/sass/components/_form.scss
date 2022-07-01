@@ -1,0 +1,165 @@
+.form{
+    width: 35%;
+    &__flex{
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+    }
+    &__bloque{
+        position: relative;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    &__input{
+        border: none;
+        outline: inherit;
+        width: 100%;
+        height: 45px;
+        padding: 0 10px;
+        border-bottom: 2px solid color('gris');
+        font-size: 18px;
+        color: color('gris');
+        background-color: transparent;
+    }
+    &__left{
+        position: relative;
+        &::after{
+            content: "";
+            background-color: color('amarillo');
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            z-index: -1;
+        }
+        &::before{
+            content: "";
+            background-color: color('azul');
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            z-index: -1;
+        }
+    }
+    &__icono{
+        position: absolute;
+        right: 20px;
+        top: 12.5px;
+        opacity: 0;
+        pointer-events: none;
+        &--bien{
+            color: color('verde');
+        }
+        &--mal{
+            color: color('rojo');
+        }
+    }
+    &__bloque--textarea{
+        textarea{
+            min-height: 200px;
+            resize: none;
+            border-right: 2px solid color('gris');
+            border-bottom-right-radius: 5px;
+        }
+        i{
+            top: 20px;
+        }
+        label{
+            &.active,
+            &.active-keyup{
+                top: -20px !important;
+            }
+        }
+    }
+    &__mensaje-validacion{
+        font-size: 13px;
+        color: color('rojo');
+        margin-top: 5px;
+        display: none;
+    }
+    &__error{
+        width: 100%;
+        padding: 10px;
+        @include flex;
+        gap: 10px;
+        text-align: center;
+        background-color: color('rojo');
+        border-radius: 5px;
+        margin-top: 30px;
+        p,
+        i{
+            color: color('primario');
+        }
+        display: none;
+    }
+    &__enviado{
+        color: color('verde');
+        text-align: center;
+        margin-top: 30px;
+        display: none;
+    }
+    &__titulo{
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            background-color: color('amarillo');
+            left: calc(50% - 30px);
+            bottom: -2px;
+        }
+    }
+    &__relative{
+        position: relative;
+    }
+    &__label{
+        position: absolute;
+        font-size: 18px;
+        top: 12px;
+        left: 10px;
+        color: color('gris');
+        pointer-events: none;
+        transition: .4s all ease;
+        &.active,
+        &.active-keyup{
+            top: -10px;
+            font-size: 14px;
+        }
+    }
+
+
+    //VALIDACION
+
+    &__bloque--bien{
+        .form__label{
+            color: color('verde');
+        }
+        .form__icono--bien{
+            opacity: 1;
+        }
+        .form__input{
+            border-color: color('verde');
+        }
+    }
+
+    &__bloque--mal{
+        .form__label{
+            color: color('rojo');
+        }
+        .form__icono--mal{
+            opacity: 1;
+        }
+        .form__input{
+            border-color: color('rojo');
+        }
+        .form__mensaje-validacion{
+            display: block;
+        }
+    }
+}

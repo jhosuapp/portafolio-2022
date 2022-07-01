@@ -7,15 +7,18 @@
         'abstracts/restart';
 
 //ANIMATIONS
-@import 'animations/header';
+@import 'animations/header',
+        'animations/button';
 
 //COMPONENTS
 @import 'components/banner',
         'components/hamburguesa',
         'components/titulos',
         'components/contenedores',
-        'components/button';
+        'components/button',
+        'components/form';
 
 //TEMPLATES
 @import 'templates/header',
-        'templates/footer';
+        'templates/footer',
+        'templates/home';

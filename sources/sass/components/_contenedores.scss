@@ -8,4 +8,24 @@
     &--bottom{
         margin-bottom: 100px;
     }
+    &--top-100{
+        margin-top: 100px;
+    }
+    &--bottom-100{
+        margin-bottom: 100px;
+    }
+}
+@media(max-width: breakpoint('ipad-pequeña')){
+    .contenedor{
+        &--padding{
+            padding: 60px 20px 60px 20px;
+        }
+    }
+}
+@media(max-width: breakpoint('celular')){
+    .contenedor{
+        &--padding{
+            padding: 60px 0 60px 0;
+        }
+    }
 }

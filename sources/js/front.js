@@ -2,6 +2,14 @@ import {
     loadNavBarHandlers
 } from './modules/NavBar'
 
+import{
+    loadButtonHandlers
+} from './modules/Button'
+
+import{
+    loadFormHandlers
+} from './modules/Form'
+
 
 
 
@@ -9,4 +17,8 @@ import {
 
 window.addEventListener('DOMContentLoaded', function () {
     loadNavBarHandlers()
+
+    loadButtonHandlers()
+
+    loadFormHandlers()
 })

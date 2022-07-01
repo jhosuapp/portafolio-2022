@@ -1,6 +1,6 @@
 .footer{
     padding: 60px 0 0 0;
-    border-top: 3px solid color('morado');
+    border-top: 3px solid color('gris');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
         gap: 20px;
     }
     &__item{
-        color: color('morado');
+        color: color('gris');
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 400;
@@ -26,7 +26,7 @@
             width: 0;
             height: 2px;
             bottom: 0px;
-            background-color: color('morado');
+            background-color: color('gris');
             left: 0;
             transition: .3s all ease;
         }
@@ -45,7 +45,7 @@
         }
         &__icono{
             font-size: 22px;
-            color: color('morado');
+            color: color('gris');
             transition: .3s all ease;
             &:hover{
                 opacity: .8;
@@ -54,7 +54,7 @@
     }
     &__bottom{
         width: 100%;
-        background-color: color('morado');
+        background-color: color('gris');
         padding: 10px 0;
         margin-top: 60px;
         &__derechos{
