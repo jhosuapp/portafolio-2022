@@ -10,6 +10,7 @@
     width: fit-content;
     height: 45px;
     font-size: 16px;
+    cursor: pointer;
     &__contenedor{
         &:hover{
             padding-bottom: 1000px;
@@ -41,7 +42,7 @@
     box-shadow: 0 2px 25px rgba(4, 47, 114, .55);
     z-index: 999;
     border: 2px solid color('primario');
-    width: 150px;
+    width: fit-content;
     &:focus {
         outline: 0;
     }

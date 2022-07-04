@@ -2,8 +2,8 @@
 
 <section class="banner">
     <div class="banner__absolute"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.90,93.25 C181.94,246.21 543.11,7.41 516.59,-45.89 L499.10,-5.42 L0.00,0.00 Z" style="stroke: none; fill: #c2e5fd;"></path></svg></div>
-    <div class="banner__bloque contenedor contenedor--bottom contenedor--padding">
-        <div class="banner__left">
+    <div class="banner__bloque contenedor contenedor--bottom-100 contenedor--padding">
+        <div class="banner__left" data-aos="fade-up">
             <h3 class="subtitulo banner__subtitulo">Lorem ipsum dolor sit</h3>
             <h1 class="titulo titulo--margin banner__titulo">Lorem ipsum dolor sit amet consectetur.</h1>
             <p class="descripcion banner__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, et?</p>
@@ -92,11 +92,31 @@
             <a href="#" class="card__link">www.test.com</a>
         </div>
     </div>
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+    <div class="card__contenedor__show">
+        <div class="loader__contenedor">
+            <div class="loader">
+                <span class="loader__span"></span>
+                <span class="loader__span"></span>
+            </div>
+        </div>
+        <a class="cta cta--top card__show-more">Mostrar más</a>
+    </div>
 </section>
 
 <!-- FORMULARIO -->
 
-<section class="contenedor contenedor--top-100 contenedor--bottom-100" id="contacto">
+<section class="contenedor contenedor--top-100 contenedor--bottom-100 contenedor--bottom-80" id="contacto">
     <h2 class="titulo form__titulo">Contactame</h2>
     <div class="form__flex">
         <div class="form__left">

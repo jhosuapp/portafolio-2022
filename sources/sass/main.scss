@@ -8,7 +8,8 @@
 
 //ANIMATIONS
 @import 'animations/header',
-        'animations/button';
+        'animations/button',
+        'animations/loader';
 
 //COMPONENTS
 @import 'components/banner',
@@ -19,7 +20,8 @@
         'components/form',
         'components/iconos',
         'components/scroll',
-        'components/card';
+        'components/card',
+        'components/loader';
 
 //TEMPLATES
 @import 'templates/header',

@@ -42,3 +42,12 @@
         }
     }
 }
+@media(max-width: breakpoint('celular')){
+    .proyectos{
+        &__top{
+            h2{
+                padding: 80px 0 20px 0;
+            }
+        }
+    }
+}

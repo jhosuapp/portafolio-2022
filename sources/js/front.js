@@ -10,6 +10,10 @@ import{
     loadFormHandlers
 } from './modules/Form'
 
+import{
+    loadPaginadorHandlers
+} from './modules/Paginador'
+
 
 
 
@@ -21,4 +25,6 @@ window.addEventListener('DOMContentLoaded', function () {
     loadButtonHandlers()
 
     loadFormHandlers()
+
+    loadPaginadorHandlers()
 })
