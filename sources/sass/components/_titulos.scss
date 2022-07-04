@@ -1,6 +1,6 @@
 .titulo{
-    color: color('morado');
-    font-size: 45px;
+    color: color('azul');
+    font-size: font('titulos');
     font-weight: 900;
     line-height: 1;
     &--margin{
@@ -8,12 +8,12 @@
     }
 }
 .subtitulo{
-    font-size: 25px;
+    font-size: font('subtitulos');
     font-weight: 500;
     color: color('secundario');
 }
 .descripcion{
-    font-size: 20px;
+    font-size: font('descripciones');
     font-weight: 400;
     color: color('secundario');
 
@@ -21,4 +21,10 @@
 
 @media(max-width: breakpoints('ipad-grande')){
 
+}
+
+@media(max-width: breakpoint('celular')){
+    .titulo{
+        font-size: font-mobile('titulos');
+    }
 }

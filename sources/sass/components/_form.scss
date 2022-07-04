@@ -1,5 +1,6 @@
 .form{
     width: 35%;
+    position: relative;
     &__flex{
         display: flex;
         flex: 1;
@@ -57,12 +58,14 @@
             color: color('rojo');
         }
     }
-    &__bloque--textarea{
+    &__bloque--mensaje{
+        margin-top:60px;
         textarea{
             min-height: 200px;
             resize: none;
             border-right: 2px solid color('gris');
             border-bottom-right-radius: 5px;
+            margin-top: 15px;
         }
         i{
             top: 20px;
@@ -89,11 +92,18 @@
         background-color: color('rojo');
         border-radius: 5px;
         margin-top: 30px;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition-duration opacity ease;
+        position: absolute;
         p,
         i{
             color: color('primario');
         }
-        display: none;
+        &.active{
+            opacity: 1;
+        }
     }
     &__enviado{
         color: color('verde');
@@ -160,6 +170,37 @@
         }
         .form__mensaje-validacion{
             display: block;
+        }
+    }
+}
+
+@media(max-width: breakpoint('ipad-grande')){
+    .form{
+        width: 100%;
+        max-width: 450px;
+        margin-top: 60px;
+        &__imagen{
+            border-radius: 0;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 0;
+        }
+        &__left{
+            width: 100%;
+        }
+        &__flex{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media(max-width: breakpoint('celular')){
+    .form{
+        &__error{
+            p{
+                font-size: 13px;
+            }
         }
     }
 }

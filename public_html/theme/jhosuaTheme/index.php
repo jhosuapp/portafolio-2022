@@ -8,7 +8,7 @@
             <h1 class="titulo titulo--margin banner__titulo">Lorem ipsum dolor sit amet consectetur.</h1>
             <p class="descripcion banner__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, et?</p>
             <p class="descripcion banner__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat.</p>
-            <a href="#" class="cta cta--top banner__cta">Contactar</a>
+            <a href="#contacto" class="cta cta--top banner__cta">Contactar</a>
         </div>
         <div class="banner__right">
             <img src="../jhosuaTheme/img/test.jpg" alt="" class="banner__imagen">
@@ -16,19 +16,96 @@
     </div>
 </section>
 
-<section style="background: #23346F; height:300px" width="100%">
+<!--PROYECTOS -->
+
+<section class="proyectos__top" width="100%">
+    <div class="proyectos__bloque">
+        <h2 class="subtitulo">Los proyectos en los que he colaborado</h2>
+        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta recusandae ratione est, temporibus asperiores provident suscipit enim id ullam nemo doloribus blanditiis aliquid voluptatem, nostrum quae error omnis voluptatibus.</p>
+    </div>
 </section>
 
-<section class="contenedor contenedor--top-100 contenedor--bottom-100">
+<section class="proyectos__grid contenedor contenedor--padding contenedor--proyectos">
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__top">
+            <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
+        </div>
+        <div class="card__middle">
+            <p class="card__descripcion descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veritatis minus deleniti ipsum ducimus repudiandae!</p>
+        </div>
+        <div class="card__bottom">
+            <a href="#" class="card__link">www.test.com</a>
+        </div>
+    </div>
+</section>
+
+<!-- FORMULARIO -->
+
+<section class="contenedor contenedor--top-100 contenedor--bottom-100" id="contacto">
     <h2 class="titulo form__titulo">Contactame</h2>
     <div class="form__flex">
         <div class="form__left">
-            <img src="../jhosuaTheme/img/test.jpg" class="banner__imagen" alt="">
+            <img src="../jhosuaTheme/img/test.jpg" class="banner__imagen form__imagen" alt="">
         </div>
         <form class="form">
             <div class="form__bloque form__bloque--nombre">
                 <div class="form__relative">
-                    <input name="nombre" id="nombre"  type="text" class="form__input">
+                    <input autocomplete="off" name="nombre" id="nombre"  type="text" class="form__input">
                     <label for="nombre" class="form__label">Nombre</label>
                 </div>
                 <i class="fa-solid fa-circle-xmark form__icono form__icono--mal"></i>
@@ -38,7 +115,7 @@
 
             <div class="form__bloque form__bloque--email">
                 <div class="form__relative">
-                    <input name="email" id="email" type="email" class="form__input">
+                    <input autocomplete="off" name="email" id="email" type="email" class="form__input">
                     <label for="nombre" class="form__label">E-mail</label>
                 </div>
                 <i class="fa-solid fa-circle-xmark form__icono form__icono--mal"></i>
@@ -46,9 +123,9 @@
                 <p class="form__mensaje-validacion">Lorem ipsum dolor sit amet.</p>
             </div>
 
-            <div class="form__bloque form__bloque--textarea">
+            <div class="form__bloque form__bloque--mensaje">
                 <div class="form__relative">
-                    <textarea name="email" class="form__input"></textarea>
+                    <textarea name="mensaje" class="form__input"></textarea>
                     <label for="nombre" class="form__label">Mensaje</label>
                 </div>
                 <i class="fa-solid fa-circle-xmark form__icono form__icono--mal"></i>
@@ -56,7 +133,7 @@
                 <p class="form__mensaje-validacion">Lorem ipsum dolor sit amet.</p>
             </div>
 
-            <button class="cta bubbly-button">Enviar</button>
+            <button type="submit" class="cta bubbly-button">Contactar</button>
 
             <div class="form__error">
                 <i class="fa-solid fa-triangle-exclamation"></i>

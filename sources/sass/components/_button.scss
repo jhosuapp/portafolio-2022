@@ -4,7 +4,7 @@
     padding: 0 50px;
     color: color('primario');
     text-transform: uppercase;
-    background: color('morado');
+    background: color('azul');
     border-radius: 5px;
     @include flex;
     width: fit-content;
@@ -20,8 +20,8 @@
         transition: .3s all ease;
         position: relative;
         &:hover{
-            background-color: colorDarken('morado', 6);
-            box-shadow: 0 0 5px 0 color('morado');
+            background-color: colorDarken('azul', 5);
+            box-shadow: 0 0 5px 0 color('azul');
             margin-top: 35px;
         }
     }

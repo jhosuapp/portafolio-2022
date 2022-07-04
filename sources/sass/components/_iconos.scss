@@ -1,0 +1,54 @@
+.iconos{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    &__links{
+        text-decoration: none;
+    }
+    &--relative{
+        position: relative;
+        bottom: 0;
+    }
+}
+%icono-igual{
+    font-size: 22px;
+    color: color('gris');
+    border: 1.8px solid color('gris');
+    border-radius: 100px;
+    padding: 5px;
+    &:hover{
+        border-color: color('azul');
+        color: color('azul');
+    }
+}
+.icono-instagram,
+.icono-likedin,
+.icono-twitter,
+.icono-telegram {
+    @extend %icono-igual;
+    &--color{
+        color: color('gris');
+        border: 1.8px solid color('gris');
+    }
+}
+
+@media (max-width:  breakpoint('ipad-grande')) {
+    .iconos{
+        left: auto;
+        bottom: -50px;
+        &--relative{
+            position: relative;
+            bottom: 0;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    }
+
+}
+  

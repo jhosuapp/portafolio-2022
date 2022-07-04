@@ -1,24 +1,27 @@
 <footer class="footer">
-    <div class="footer__redes">
-        <a href="#" class="footer__redes__link">
-            <i class="fa-brands footer__redes__icono fa-instagram"></i>
-        </a>
-        <a href="#" class="footer__redes__link">
-            <i class="fa-brands footer__redes__icono fa-linkedin-in"></i>
-        </a>
-        <a href="#" class="footer__redes__link">
-            <i class="fa-brands footer__redes__icono fa-facebook"></i>
-        </a>
+    <div class="footer__contenido">
+        <h3 class="footer__subtitulo">
+            <b>This footer sholudn't be here</b>
+        </h3>
+        <p>
+            © 2021 Todos los Derechos reservados | Jhosua Penagos
+        </p>
     </div>
-    <div class="footer__list">
-        <a href="#" class="footer__item">Sección página</a>
-        <a href="#" class="footer__item">Sección página</a>
-        <a href="#" class="footer__item">Sección página</a>
-        <a href="#" class="footer__item">Sección página</a>
-        <a href="#" class="footer__item">Sección página</a>
-    </div>
-    <div class="footer__bottom">
-        <p class="footer__bottom__derechos">Todos los derechos reservados a Jhosua Penagos</p>
+    <div class="footer__iconos">
+        <div class="iconos iconos--relative">
+            <a class="iconos__links" href="#">
+                <i class="fab fa-instagram icono-instagram icono-instagram--color" aria-hidden="true"></i>
+            </a>
+            <a class="iconos__links" href="#">
+                <i class="fab fa-linkedin-in icono-likedin icono-likedin--color" aria-hidden="true"></i>
+            </a>
+            <a class="iconos__links" href="#">
+                <i class="fab fa-twitter icono-twitter icono-twitter--color" aria-hidden="true"></i>
+            </a>
+            <a class="iconos__links" href="#">
+                <i class="fab fa-telegram-plane icono-telegram icono-telegram--color" aria-hidden="true"></i>
+            </a>
+        </div>
     </div>
 </footer>
 

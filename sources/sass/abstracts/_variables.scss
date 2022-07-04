@@ -3,7 +3,7 @@
 $palette : (
     'primario': #fff,
     'secundario': #000,
-    'azul': #042F72,
+    'azul': #498ef9,
     'gris': #414241,
     'morado': #23346F,
     'amarillo': #FEDB31,
@@ -15,11 +15,15 @@ $palette : (
 //FONT SIZE
 
 $font : (
-    'titulos': 55px
+    'titulos': 55px,
+    'subtitulos': 28px,
+    'descripciones': 20px,
+    'subtitulo-footer': 22px
+
 );
 
 $font-mobile: (
-    'titulos': 20px
+    'titulos': 38px
 );
 
 //BREAKPOINTS
@@ -27,6 +31,7 @@ $font-mobile: (
 $breakpoints: (
     'desktop': 1800px,
     'portatil': 1440px,
+    'portatil-pequeño': 1100px,
     'ipad-grande': 992px,
     'ipad-pequeña': 768px,
     'celular': 576px

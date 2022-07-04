@@ -40,6 +40,7 @@
 
 @media(max-width: breakpoint('ipad-grande')){
     .banner{
+        margin-top: 60px;
         &__bloque{
             flex-direction: column-reverse;
             justify-content: center;

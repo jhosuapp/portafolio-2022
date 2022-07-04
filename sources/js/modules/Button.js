@@ -2,8 +2,6 @@ var Button = (function(){
 
     function _animateButton(){
         var animateButton = function(e) {
-
-            e.preventDefault();
             //reset animation
             e.target.classList.remove('animate');
             
