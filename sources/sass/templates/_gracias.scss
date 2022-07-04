@@ -1,0 +1,41 @@
+.gracias{
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    @include flex;
+    gap: 30px;
+    &__contenedor{
+        animation: fade-from-top 1.5s ease 1;
+        @include flex;
+        flex-direction: column;
+    }
+    &__titulo{
+        color: color('gris');
+        font-size: font('gracias-titulo');
+        margin-bottom: 20px;
+    }
+    &__descripcion{
+        color: color('gris');
+        font-weight: 300;
+        font-size: font('gracias-descripcion');
+    }
+    &__bloque{
+        margin: 30px 0;
+        text-align: center;
+    }
+}
+@media(max-width: breakpoint('celular')){
+    .gracias{
+        gap: 20px;
+        &__titulo{
+            font-size: font-mobile('gracias-titulo');
+        }
+        &__descripcion{
+            font-size: font-mobile('gracias-descripcion');
+        }
+        &__bloque{
+            margin: 20px 0;
+        }
+    }
+}

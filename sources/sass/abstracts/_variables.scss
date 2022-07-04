@@ -19,12 +19,15 @@ $font : (
     'titulos': 55px,
     'subtitulos': 28px,
     'descripciones': 20px,
-    'subtitulo-footer': 22px
-
+    'subtitulo-footer': 22px,
+    'gracias-titulo': 44px,
+    'gracias-descripcion': 24px
 );
 
 $font-mobile: (
-    'titulos': 38px
+    'titulos': 38px,
+    'gracias-titulo': 34px,
+    'gracias-descripcion': 20px
 );
 
 //BREAKPOINTS

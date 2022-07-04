@@ -4,7 +4,7 @@ var NavBar = (function(){
     
     //EVENTO SCROLL
     function _scrollMenu () {
-        let navElement = document.querySelector(".header__left svg");
+        let navElement = document.querySelector(".header__left img");
 
         if(scrollY > 50){
             navElement.classList.add('active');
@@ -44,12 +44,22 @@ var NavBar = (function(){
         });
     }
 
+    //LOADER
+
+    function _loader(){
+        var getLoaderGeneral = document.querySelector('.loader-general');
+        
+        setTimeout(()=>{
+            getLoaderGeneral.classList.add('hidden');
+        },200);
+    }
     
     return {
         setHandleEvent: function () {
             _scrollMenu()
             _hamburguesaEvent()
             _idetificador()
+            _loader()
         }
     }
 

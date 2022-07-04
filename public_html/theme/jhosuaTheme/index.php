@@ -10,7 +10,7 @@
             <p class="descripcion banner__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugiat.</p>
             <a href="#contacto" class="cta cta--top banner__cta">Contactar</a>
         </div>
-        <div class="banner__right">
+        <div class="banner__right" data-aos="fade-up" data-aos-delay="100"> 
             <img src="../jhosuaTheme/img/test.jpg" alt="" class="banner__imagen">
         </div>
     </div>
@@ -20,13 +20,13 @@
 
 <section class="proyectos__top" width="100%">
     <div class="proyectos__bloque">
-        <h2 class="subtitulo">Los proyectos en los que he colaborado</h2>
-        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta recusandae ratione est, temporibus asperiores provident suscipit enim id ullam nemo doloribus blanditiis aliquid voluptatem, nostrum quae error omnis voluptatibus.</p>
+        <h2 class="subtitulo" data-aos="fade-up">Los proyectos en los que he colaborado</h2>
+        <p class="descripcion" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta recusandae ratione est, temporibus asperiores provident suscipit enim id ullam nemo doloribus blanditiis aliquid voluptatem, nostrum quae error omnis voluptatibus.</p>
     </div>
 </section>
 
 <section class="proyectos__grid contenedor contenedor--padding contenedor--proyectos">
-    <div class="card">
+    <div class="card" data-aos="fade-up">
         <div class="card__top">
             <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
         </div>
@@ -37,7 +37,7 @@
             <a href="#" class="card__link">www.test.com</a>
         </div>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="50">
         <div class="card__top">
             <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
         </div>
@@ -48,7 +48,7 @@
             <a href="#" class="card__link">www.test.com</a>
         </div>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
         <div class="card__top">
             <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
         </div>
@@ -59,7 +59,7 @@
             <a href="#" class="card__link">www.test.com</a>
         </div>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="150">
         <div class="card__top">
             <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
         </div>
@@ -70,7 +70,7 @@
             <a href="#" class="card__link">www.test.com</a>
         </div>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
         <div class="card__top">
             <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
         </div>
@@ -81,7 +81,7 @@
             <a href="#" class="card__link">www.test.com</a>
         </div>
     </div>
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="250">
         <div class="card__top">
             <img src="../jhosuaTheme/img/houston.svg" class="card__icono">
         </div>
@@ -145,7 +145,7 @@
 
             <div class="form__bloque form__bloque--mensaje">
                 <div class="form__relative">
-                    <textarea name="mensaje" class="form__input"></textarea>
+                    <textarea name="mensaje" autocomplete="off" class="form__input"></textarea>
                     <label for="nombre" class="form__label">Mensaje</label>
                 </div>
                 <i class="fa-solid fa-circle-xmark form__icono form__icono--mal"></i>

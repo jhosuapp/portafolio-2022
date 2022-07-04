@@ -26,6 +26,18 @@
             margin-top: 35px;
         }
     }
+    &--azul-agua{
+        border-radius: 100px;
+        background-color: transparent;
+        color: color('azul-agua');
+        padding: 5px 30px;
+        border: 2px solid color('azul-agua');
+        transition: $transition-duration (background-color, color) ease;
+        &:hover{
+            background-color: color('azul-agua');
+            color: color('primario');
+        }
+    }
 }
 
 //BOTON ANIMADO
@@ -40,7 +52,7 @@
     position: relative;
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
     box-shadow: 0 2px 25px rgba(4, 47, 114, .55);
-    z-index: 999;
+    z-index: 9;
     border: 2px solid color('primario');
     width: fit-content;
     &:focus {

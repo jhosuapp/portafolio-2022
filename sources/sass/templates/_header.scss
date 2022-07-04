@@ -10,7 +10,7 @@
     align-items: center;
     &__left{
         padding: 15px 0 15px 20px;
-        svg{
+        img{
             transition: $transition-duration width ease;
             width: 120px;
             &.active{

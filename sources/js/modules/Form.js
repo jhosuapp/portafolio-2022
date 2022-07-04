@@ -93,12 +93,11 @@ var Form = (function(){
 
             if(validation.email && validation.nombre && validation.mensaje){
 
-                // window.location.href = '/';
-
                 fetch('../jhosuaTheme/conexiones/form.php')
                     .then(res => res.json())
                     .then(data =>{
                         console.log(data);
+                        window.location.href = '../jhosuaTheme/templates/gracias.php';
                     });
 
             }else{
