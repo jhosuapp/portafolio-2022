@@ -76,3 +76,47 @@
         opacity: 0;
     }
 }
+
+//close 
+
+@keyframes heightClose{
+    from{
+        opacity: 1;
+        transform: rotate(-180deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotate(-50deg);
+    }
+}
+@keyframes heightCloseSecondChild{
+    from{
+        opacity: 1;
+        transform: rotate(-180deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotate(50deg);
+    }
+}
+
+@keyframes heightCloseDefecto{
+    from{
+        opacity: 1;
+        transform: rotate(-50deg);
+    }
+    to{
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+}
+@keyframes heightCloseDefectoSecondChild{
+    from{
+        opacity: 1;
+        transform: rotate(50deg);
+    }
+    to{
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+}

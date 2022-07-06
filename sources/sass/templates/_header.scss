@@ -64,6 +64,47 @@
     &__hamburguesa{
         display: none;
     }
+    &__close{
+        width: 60px;
+        height: 45px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        display: none;
+        &.active{
+            .header__close__line:first-child{
+                animation: heightCloseSecondChild 1s cubic-bezier(0.5, 0, 0.5, 1) 1;
+            }
+            .header__close__line:nth-child(2){
+                animation: heightClose 1s cubic-bezier(0.5, 0, 0.5, 1) 1;
+            }
+        }
+        &.close{
+            .header__close__line:first-child{
+                animation: heightCloseDefecto 1s cubic-bezier(0.5, 0, 0.5, 1) 1;
+                animation-fill-mode: forwards;
+            }
+            .header__close__line:nth-child(2){
+                animation: heightCloseDefectoSecondChild 1s cubic-bezier(0.5, 0, 0.5, 1) 1;
+                animation-fill-mode: forwards;
+            }
+        }
+        &__line{
+            height: 30px;
+            width: 3px;
+            background-color: #fff;
+            border-radius: 100px;
+            position: absolute;
+            left: 50%;
+            &:first-child{
+                transform: rotate(-50deg);
+            }
+            &:nth-child(2){
+                transform: rotate(50deg);
+            }
+        }
+    }
 }
 
 @media(max-width: breakpoint('ipad-grande')){
@@ -71,9 +112,17 @@
         &__hamburguesa{
             display: flex;
             margin-right: 20px;
+            position: relative;
+        }
+        &__close{
+            position: absolute;
+            right: 2px;
+            &.active{
+                display: flex;
+            }
         }
         &__left{
-            svg{
+            img{
                 width: 85px;
                 &.active{
                     width: 85px;

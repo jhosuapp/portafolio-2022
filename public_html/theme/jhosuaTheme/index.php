@@ -117,12 +117,12 @@
 <!-- FORMULARIO -->
 
 <section class="contenedor contenedor--top-100 contenedor--bottom-100 contenedor--bottom-80" id="contacto">
-    <h2 class="titulo form__titulo">Contactame</h2>
+    <h2 class="titulo form__titulo" data-aos="fade-up">Contactame</h2>
     <div class="form__flex">
-        <div class="form__left">
+        <div class="form__left" data-aos="fade-up">
             <img src="../jhosuaTheme/img/test.jpg" class="banner__imagen form__imagen" alt="">
         </div>
-        <form class="form">
+        <form class="form" data-aos="fade-up" data-aos-delay="100">
             <div class="form__bloque form__bloque--nombre">
                 <div class="form__relative">
                     <input autocomplete="off" name="nombre" id="nombre"  type="text" class="form__input">

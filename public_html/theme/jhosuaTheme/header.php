@@ -21,6 +21,10 @@
         <div class="hamburguesa__line hamburguesa__cien"></div>
         <div class="hamburguesa__line hamburguesa__ochenta"></div>
     </div>
+    <div class="header__close">
+        <div class="header__close__line"></div>
+        <div class="header__close__line"></div>
+    </div>
 </header>
 
 <div class="loader-general">

@@ -23,6 +23,7 @@
         }
     }   
     &.active{
+        pointer-events: none;
         .hamburguesa__cien{
             animation-name: hamburguesa-cien;
             animation-fill-mode: forwards;

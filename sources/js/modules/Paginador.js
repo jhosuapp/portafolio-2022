@@ -29,6 +29,8 @@ var Paginador = (function(){
         function reUseMostrarCards(numberOne, numberTwo){
 
             getButtonShowMore.addEventListener('click', ()=>{
+                var getSectionGrid = document.querySelector('.proyectos__grid');
+                getSectionGrid.style.height = "auto";
 
                 var getLoader = document.querySelector('.loader__contenedor');
                 getLoader.classList.add('active');

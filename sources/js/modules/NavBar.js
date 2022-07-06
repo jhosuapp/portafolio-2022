@@ -18,13 +18,25 @@ var NavBar = (function(){
     function _hamburguesaEvent(){
         let getHabmgurgerButton = document.querySelector('.hamburguesa');
         let navElementMiddle = document.querySelector('.header__middle');
-        
+        let getCloseButton = document.querySelector('.header__close');
+
         getHabmgurgerButton.addEventListener('click', ()=>{
             getHabmgurgerButton.classList.add('active');
 
             setTimeout(()=>{
-                navElementMiddle.classList.add('active')
+                navElementMiddle.classList.add('active');
+                getCloseButton.classList.add('active');
+                getCloseButton.classList.remove('close');
             },500);
+        });
+
+        getCloseButton.addEventListener('click', ()=>{
+            getCloseButton.classList.add('close');
+
+            setTimeout(()=>{
+                navElementMiddle.classList.remove('active');
+                getHabmgurgerButton.classList.remove('active');
+            },1000);
         });
     }
 
