@@ -1,5 +1,7 @@
 <?php include 'header.php' ?>
 
+<!-- TERMINA HEADER -->
+
 <section class="banner">
     <div class="banner__absolute"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.90,93.25 C181.94,246.21 543.11,7.41 516.59,-45.89 L499.10,-5.42 L0.00,0.00 Z" style="stroke: none; fill: #c2e5fd;"></path></svg></div>
     <div class="banner__bloque contenedor contenedor--bottom-100 contenedor--padding">
@@ -166,5 +168,7 @@
         </form>
     </div>
 </section>
+
+<!-- INICIA FOOTER -->
 
 <?php include 'footer.php' ?>

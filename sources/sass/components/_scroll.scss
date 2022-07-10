@@ -11,3 +11,16 @@ body{
         height: 5px;
     }
 }
+.bot-form__bloque{
+    &::-webkit-scrollbar-thumb {
+        background: rgba(124, 126, 124, .35);
+        margin-right: 2px;
+        &:hover{
+            background: color('azul-agua');
+        }
+    }
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 5px;
+    }
+}

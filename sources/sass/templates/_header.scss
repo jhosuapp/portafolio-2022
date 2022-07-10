@@ -49,14 +49,15 @@
         padding: 0 20px 0 0;
     }
     &__cta{
-        border: 1px solid color('primario');
+        // border: 1px solid color('primario');
         padding: 0 10px;
         font-size: 15px;
         font-weight: 500;
-        background: color('azul');
+        background: linear-gradient(90deg,#498ef9,#265daf,#498ef9);
         box-shadow: 0 0 5px 0 color('secundario');
-        // height: 40px;
-        transition: $transition-duration all ease;
+        // transition: $transition-duration all ease;
+        background-size: 1300%;
+        animation: botonGradient 40s linear infinite;
         &:hover{
             background-color: colorDarken('azul', 04);
         }

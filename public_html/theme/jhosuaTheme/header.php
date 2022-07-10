@@ -30,4 +30,3 @@
 <div class="loader-general">
     <div class="loader-general__ring"><div></div><div></div><div></div><div></div></div>
 </div>
-<script src="https://kit.fontawesome.com/2e5d66409c.js" crossorigin="anonymous"></script>

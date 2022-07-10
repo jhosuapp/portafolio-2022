@@ -25,6 +25,14 @@
     </div>
 </footer>
 
+<!-- CHAT BOT -->
+<?php
+    include 'template-part/chat-bot.php'
+?>
+
+<!-- SCRIPTS -->
+
+<script src="https://kit.fontawesome.com/2e5d66409c.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
  AOS.init({

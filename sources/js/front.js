@@ -14,6 +14,10 @@ import{
     loadPaginadorHandlers
 } from './modules/Paginador'
 
+import{
+    loadBotHandlers
+} from './modules/Bot'
+
 
 
 
@@ -27,4 +31,6 @@ window.addEventListener('DOMContentLoaded', function () {
     loadFormHandlers()
 
     loadPaginadorHandlers()
+
+    loadBotHandlers()
 })
