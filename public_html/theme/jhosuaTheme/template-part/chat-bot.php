@@ -19,14 +19,29 @@
         </div>
         <form class="bot-form">
             <div class="bot-form__bloque">
-                <div class="bot-form__mensaje">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, blanditiis quam excepturi ipsam quos perspiciatis quia delectus, sint omnis facilis error quis deleniti harum voluptas dolor voluptates corporis id quaerat quasi provident laborum. Reprehenderit dignissimos fuga quisquam consequatur totam incidunt asperiores, ratione aut molestiae qui cupiditate nulla magnam commodi illum omnis aspernatur quae minima quia! At placeat aut vero molestias explicabo incidunt. Maxime, ex, delectus pariatur quaerat ipsa itaque hic ut ducimus voluptates excepturi, laudantium enim at animi distinctio. Doloribus dolorum ullam, molestiae, possimus explicabo hic, nostrum error aut aperiam inventore obcaecati. Expedita blanditiis, magni eveniet beatae deserunt quaerat neque?</p>
+                <div class="bot-form__relative">
+                    <div class="bot-form__mensaje bot-form__mensaje--animation">
+                        <p>!Hola¡</p>
+                    </div>
+                    <div class="bot-form__mensaje bot-form__mensaje--animation">
+                        <p>Mi nombre es <b>Jhosua</b> y actualmente soy desarrollador front-end</p>
+                    </div>
+                    <div class="bot-form__mensaje bot-form__mensaje--animation">
+                        <p>¿En qué estas interesado?</p>
+                    </div>
+                    <div class="bot-form__mensaje bot-form__mensaje--typing">
+                        <div class="bot-form__typing">
+                            <div class="bot-form__typing--dot"></div>
+                            <div class="bot-form__typing--dot"></div>
+                            <div class="bot-form__typing--dot"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bot-form__respuesta">
+                <!-- <div class="bot-form__respuesta">
                     <div class="bot-form__respuesta--bloque">
                         <p>Lorem, ipsum dolor.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="bot-form__bloque--bottom">
                 <input type="text" placeholder="Escribe tu respuesta aquí" class="bot-form__input--respuesta">

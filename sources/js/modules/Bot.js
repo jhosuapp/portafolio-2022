@@ -28,8 +28,22 @@ var Bot = (function(){
     }
 
     function _openBot(){
+
+        function showMensajes(){
+            var getAllFormBloque = document.querySelectorAll('.bot-form__bloque .bot-form__mensaje--animation');
+            var getMensajeForTyping = document.querySelector('.bot-form__mensaje--typing');
+    
+            getAllFormBloque.forEach((data, indice)=>{
+                data.classList.add('active');
+                data.style.animation = `2s mensaje forwards 1 ${indice * 2.5 + "s"}`;
+                getMensajeForTyping.style.animation = `2s typingHidden forwards 1 ${indice * 2.5 + "s"}`;
+            });
+    
+        }
+
         getFirtsContainerBot.addEventListener('click', ()=>{
             getSecondContainerBot.classList.add('active');
+            showMensajes();
         });
     }
 
@@ -40,6 +54,7 @@ var Bot = (function(){
             getSecondContainerBot.classList.remove('active');
         });
     }
+
 
     return{
         setHandleEvent: function(){

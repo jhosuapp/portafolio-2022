@@ -1,0 +1,39 @@
+@keyframes mensaje{
+    from{
+        opacity: 0;
+        position: absolute;
+    }
+    50%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        position: relative;
+    }
+}
+@keyframes typingHidden{
+    from{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    to{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes typing{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(2px);
+        opacity: .8;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
