@@ -203,6 +203,9 @@
                 position: absolute;
                 top: 100%;
             }
+            &:first-child{
+                margin-top: 0;
+            }
             p{
                 font-size: 15px;
                 color: color('gris-oscuro');
@@ -272,6 +275,75 @@
             svg{
                 transition: .3s fill ease;
                 fill: color('azul-agua');
+            }
+        }
+
+        //RADIO BUTTON
+
+        &__radio{
+            &__label{
+                font-size: 15px;
+                color: color('gris-oscuro');
+                padding: 10px;
+                border: 2px solid color('azul-agua');
+                border-radius: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                transition: .5s (background-color, color) ease;
+                &:hover,
+                &.active{
+                    background-color: color('azul-agua');
+                    color: color('primario');
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            &__input{
+                display: none;
+            }
+        }
+
+        //MENSAJE
+
+        &__mensaje{
+            &--index{
+                position: relative;
+                z-index: 999;
+            }
+            &--radio{
+                &.hidden{
+                    opacity: .8 !important;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        //RESPUESTA
+
+        &__respuesta{
+            transition: .5s opacity ease;
+            &--radio{
+                pointer-events: none;
+                opacity: 0;
+                position: absolute;
+                &.active{
+                    opacity: 1;
+                    pointer-events: all;
+                    position: relative;
+                }
+            }
+        }
+
+        //BLOQUE FINAL DE RESPUESTA DISABLE
+
+        &__bloque{
+            &--bottom--respuesta.disable{
+                cursor: no-drop;
+                .bot-form__input--respuesta,
+                .bot-form__send{
+                    pointer-events: none;
+                }
             }
         }
     }
