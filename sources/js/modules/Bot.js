@@ -6,7 +6,20 @@ var Bot = (function(){
     const getBloqueRespuesta = document.querySelector('#bot-form__bloque-respuesta');
     const getFirtsContainerBot = document.querySelector('.bot__bloque--firts');
     const getSecondContainerBot = document.querySelector('.bot__bloque--second');
+    const getMensajeValidation = document.querySelector('.bot-validacion');
+    const getTextContetValidation = document.querySelector('.bot-validacion p');
 
+    const expresionesRegularesBot = {
+        nombreBot: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
+        emailBot: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        mensajeBot: /^[a-zA-Z0-9\s_.+-,]{3,100}$/
+    }   
+
+    const estadoExpresiones = {
+        nombreBot: false,
+        emailBot: false,
+        mensajeBot: false
+    }
 
     function _bienvenidaBot(){
         var getMensajeBienvenida = document.querySelector('.bot__bloque--firts__left');
@@ -90,7 +103,7 @@ var Bot = (function(){
 
                 //HABILITA CAMPO PARA ESCRIBIR RESPUESTA DEL NOMBRE
 
-                getBloqueRespuesta .classList.remove('disable');
+                getBloqueRespuesta.classList.remove('disable');
 
             });
 
@@ -100,20 +113,96 @@ var Bot = (function(){
 
     //VALIDACION DE ENVIO Y VALIDACION DE DATOS
 
+
+    function _validationContentData(){
+        
+        function reUseValidacionExpresiones(expresion, tar, bloque){
+            if(expresion.test(tar.value)){
+                estadoExpresiones[bloque] = true;
+            }else{
+                estadoExpresiones[bloque] = false;
+            }  
+        }
+
+        function validacionExpresiones(e){
+            switch (e.target.name) {
+                case 'nombreBot':
+                    reUseValidacionExpresiones(expresionesRegularesBot.nombreBot, e.target, 'nombreBot');
+                break;
+                case 'emailBot':
+                    reUseValidacionExpresiones(expresionesRegularesBot.emailBot, e.target, 'emailBot');
+                break;
+                case 'mensajeBot':
+                    reUseValidacionExpresiones(expresionesRegularesBot.mensajeBot, e.target, 'mensajeBot');
+                break;
+            }
+        }
+
+        getInputRespuesta.addEventListener('keyup', validacionExpresiones);
+
+    }
+
+
     function _funcionalidadForm(){
+        //SE INICIALIZA ARRAY EN EL CUAL SE VAN A GUARDAR LOS DATOS PERSONALES
         var arrayWithDataForm = [];
 
 
-        //NO RECARGAR LA PAGINA
         getFormOfBot.addEventListener('submit', (e)=>{
-            
+
             var getValueInputRespuesta = getInputRespuesta.value;
+
+            function reUseDataTypeInput(expresion, inputName, texto){
+                if(expresion){
+    
+                    arrayWithDataForm.push(getValueInputRespuesta);
+                    getMensajeValidation.classList.remove('active');
+                    getInputRespuesta.setAttribute('name', inputName);
+                    getInputRespuesta.value = "";
+                } else{
+    
+                    getTextContetValidation.textContent = texto;
+                    getMensajeValidation.classList.add('active');
+                }
+            }
+
             
-            arrayWithDataForm.push(getValueInputRespuesta);
+            switch (arrayWithDataForm.length){
+                case 0:
+                    reUseDataTypeInput(estadoExpresiones.nombreBot, 'emailBot', 'Por favor ingrese un nombre valido, las única expresiones validas son las tildes');
+                break;
+                case 1:
+                    reUseDataTypeInput(estadoExpresiones.emailBot, 'mensajeBot', 'Por favor ingrese un correo valido');
+                break;
+                case 2:
+                    reUseDataTypeInput(estadoExpresiones.mensajeBot, 'termine', 'Por favor ingrese un mensaje valido');
+                break;
+            }
+
+            if(estadoExpresiones.nombreBot && estadoExpresiones.mensajeBot && estadoExpresiones.emailBot){
+
+                //ALMACENAMOS LA DATA DE LOS INPUTS
+                let getDataoFform = new FormData(getFormOfBot);
+
+                fetch('../jhosuaTheme/conexiones/bot.php', {
+                        method: 'POST',
+                        body: getDataoFform
+                })
+                .then(res => res.json())
+                .then(data =>{
+                    console.log(data);
+                });
+                
+            }
+
+
 
             console.log(arrayWithDataForm);
+
+            //NO RECARGAR LA PAGINA
             e.preventDefault();
         });
+
     }
 
 
@@ -124,6 +213,7 @@ var Bot = (function(){
             _closeBot()
             _radioButton()
             _funcionalidadForm()
+            _validationContentData()
         }
     }
 
