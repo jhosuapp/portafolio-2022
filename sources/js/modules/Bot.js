@@ -8,6 +8,7 @@ var Bot = (function(){
     const getSecondContainerBot = document.querySelector('.bot__bloque--second');
     const getMensajeValidation = document.querySelector('.bot-validacion');
     const getTextContetValidation = document.querySelector('.bot-validacion p');
+    const getAllInputsWithValue = document.querySelectorAll('.valuesForSend');
 
     const expresionesRegularesBot = {
         nombreBot: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
@@ -28,7 +29,7 @@ var Bot = (function(){
 
         setTimeout(()=>{    
             getFirtsContainerBot.classList.add('active');
-        },2000 );
+        },2000);
 
         //QUITAR MENSAJE DE BIENVENIDA
         setTimeout(()=>{
@@ -144,6 +145,7 @@ var Bot = (function(){
 
 
     function _funcionalidadForm(){
+
         //SE INICIALIZA ARRAY EN EL CUAL SE VAN A GUARDAR LOS DATOS PERSONALES
         var arrayWithDataForm = [];
 
@@ -152,6 +154,7 @@ var Bot = (function(){
 
             var getValueInputRespuesta = getInputRespuesta.value;
 
+            //CREAMOS FUNCION PARA REUTLIZAR LAS VALIDACIONES CON EXPRESIONES REGULARES
             function reUseDataTypeInput(expresion, inputName, texto){
                 if(expresion){
     
@@ -177,13 +180,22 @@ var Bot = (function(){
                 case 2:
                     reUseDataTypeInput(estadoExpresiones.mensajeBot, 'termine', 'Por favor ingrese un mensaje valido');
                 break;
+                default:
+                    alert('no me hackee hpta');
+                break;
             }
 
             if(estadoExpresiones.nombreBot && estadoExpresiones.mensajeBot && estadoExpresiones.emailBot){
 
+                //ASIGNAMOS LOS VALUES A LOS INPUTS FINALES
+                getAllInputsWithValue.forEach((data, indice)=>{
+                    data.value = arrayWithDataForm[indice];
+                });
+
                 //ALMACENAMOS LA DATA DE LOS INPUTS
                 let getDataoFform = new FormData(getFormOfBot);
 
+                //ENVIAMOS LOS DATOS DEL FORMLARIO AL BACKEND
                 fetch('../jhosuaTheme/conexiones/bot.php', {
                         method: 'POST',
                         body: getDataoFform
@@ -194,10 +206,6 @@ var Bot = (function(){
                 });
                 
             }
-
-
-
-            console.log(arrayWithDataForm);
 
             //NO RECARGAR LA PAGINA
             e.preventDefault();

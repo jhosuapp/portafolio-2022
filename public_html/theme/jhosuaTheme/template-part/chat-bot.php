@@ -95,7 +95,11 @@
             </div>
 
 
+            <!-- INPUTS CON LOS VALUES -->
 
+            <input type="hidden" id="nombreBotLast" class="valuesForSend" name="nombreBotLast">
+            <input type="hidden" id="emailBotLast" class="valuesForSend" name="emailBotLast">
+            <input type="hidden" id="mensajeBotLast" class="valuesForSend" name="mensajeBotLast">
 
             <!-- BLOQUE DE RESPUESTA -->
 
